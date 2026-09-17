@@ -2,7 +2,7 @@
 Developed a credit approval system for lenders to predict defaults
 
 # Data 
-Processed over 1.36 Million raw rows of LendingClub loan data. Architected an airtight data pipeline utilizing chunked extraction to eliminate information leakage, treated missing indicators safely, and optimized feature types for matrix math.
+Processed over 1.36 Million rows of raw LendingClub loan data. Architected an airtight data pipeline utilizing chunked extraction to eliminate information leakage, treated missing indicators safely, and optimized feature types for matrix math.
 
 https://www.kaggle.com/datasets/wordsforthewise/lending-club/data
 
