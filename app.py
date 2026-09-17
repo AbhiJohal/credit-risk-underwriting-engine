@@ -20,7 +20,7 @@ except Exception as e:
     assets_loaded = False
 
 # 2. Main Dashboard Interface Setup
-strl.title("🏦 Institutional Credit Risk & Compliance Engine")
+strl.title("Institutional Credit Risk & Compliance Engine")
 strl.markdown("Input application parameters to generate automated underwriting decisions and compliance documentation.")
 
 if not assets_loaded:
