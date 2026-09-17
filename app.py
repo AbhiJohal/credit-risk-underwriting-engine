@@ -100,7 +100,7 @@ else:
             
             # 5. Output Regulatory Compliance Adverse Action Notice
             strl.markdown("---")
-            strl.subheader("🔒 Automated Regulatory Compliance Documentation")
+            strl.subheader("Automated Regulatory Compliance Documentation")
             strl.caption("Generated automatically pursuant to the Equal Credit Opportunity Act (ECOA)")
             
             notice_text = f"""
