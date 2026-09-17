@@ -10,7 +10,7 @@ def train_credit_engine(X_train, y_train):
     """
     Initializes and fits an XGBoost classifier optimized for imbalanced financial risk.
     """
-    print("⏳ Training the production XGBoost Credit Risk Engine...")
+    print("Training the production XGBoost Credit Risk Engine...")
     
     # Using the same proven parameters from our notebook phase
     model = xgb.XGBClassifier(
@@ -23,7 +23,7 @@ def train_credit_engine(X_train, y_train):
     )
     
     model.fit(X_train, y_train)
-    print("🚀 Model training complete!")
+    print("Model training complete!")
     return model
 
 def save_artifacts(model, feature_names):
@@ -34,12 +34,12 @@ def save_artifacts(model, feature_names):
     # Save the model file
     model_path = 'models/credit_xgb_model.joblib'
     joblib.dump(model, model_path)
-    print(f"💾 Model saved successfully to: {model_path}")
+    print(f"Model saved successfully to: {model_path}")
     
     # Save feature names so our dashboard knows the column order later
     feature_path = 'models/feature_names.joblib'
     joblib.dump(feature_names, feature_path)
-    print(f"💾 Feature column map saved to: {feature_path}")
+    print(f"Feature column map saved to: {feature_path}")
 
 if __name__ == "__main__":
     # Define your exact raw file path
