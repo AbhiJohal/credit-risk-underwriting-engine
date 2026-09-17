@@ -24,13 +24,13 @@ strl.title("🏦 Institutional Credit Risk & Compliance Engine")
 strl.markdown("Input application parameters to generate automated underwriting decisions and compliance documentation.")
 
 if not assets_loaded:
-    strl.error("❌ Could not find model files. Please run 'python src/train.py' first to generate your model assets.")
+    strl.error("Could not find model files. Please run 'python src/train.py' first to generate your model assets.")
 else:
     # Organize layout into two visual side-by-side columns
     col1, col2 = strl.columns([1, 1.5])
     
     with col1:
-        strl.header("📝 Applicant Credit Profile")
+        strl.header("Applicant Credit Profile")
         
         # Numeric input sliders and boxes
         loan_amnt = strl.number_input("Requested Loan Amount ($)", min_value=1000, max_value=40000, value=10000, step=500)
@@ -58,7 +58,7 @@ else:
         revol_util = 45.0
 
     with col2:
-        strl.header("📊 Underwriting Decision Gateway")
+        strl.header("Underwriting Decision Gateway")
         
         # 3. Process inputs into the exact column matrix shape expected by XGBoost
         input_data = {
@@ -92,11 +92,11 @@ else:
         
         # Establish conservative credit tier thresholds
         if prob_default < 0.30:
-            strl.success("✅ APPLICATION APPROVED: Low Credit Risk Profile")
+            strl.success("APPLICATION APPROVED: Low Credit Risk Profile")
         elif prob_default < 0.60:
-            strl.warning("⚠️ REFER TO CREDIT COMMITTEE: Borderline Risk Tier")
+            strl.warning("REFER TO CREDIT COMMITTEE: Borderline Risk Tier")
         else:
-            strl.error("❌ APPLICATION DENIED: High Structural Credit Risk")
+            strl.error("APPLICATION DENIED: High Structural Credit Risk")
             
             # 5. Output Regulatory Compliance Adverse Action Notice
             strl.markdown("---")
