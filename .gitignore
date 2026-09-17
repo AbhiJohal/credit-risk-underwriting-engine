@@ -2,7 +2,7 @@
 data/
 
 # Ignore models if they exceed 100MB
-models/*.joblib
+# models/*.joblib
 
 # Ignore system files
 .DS_Store
